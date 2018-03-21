@@ -2,16 +2,16 @@
 
 namespace binary_search
 {
-    class Program
+    public class BinarySearch
     {
-        static int FindNumber(int[] numbers, int search) {
+        public static int FindNumber(int[] numbers, int search) {
             var closest = -1;
             var found = FindNumber(numbers, search, 0, numbers.Length - 1, closest);
             Console.WriteLine($"Searched for {search} in {String.Join(",", numbers)}, found {found}.");
             return found;
         }
 
-        static int FindNumber(int[] numbers, int search, int start, int end, int closest) {
+        public static int FindNumber(int[] numbers, int search, int start, int end, int closest) {
             var middle = (end + start) / 2;
             if (end < start) { // nothing found :(
                 return closest;
@@ -24,19 +24,6 @@ namespace binary_search
                 closest = numbers[middle];
                 return FindNumber(numbers, search, middle + 1, end, closest);
             }
-        }
-
-        static void Main(string[] args)
-        {
-            var numbers = new int[]{ 1, 3, 5, 7, 9 };
-            FindNumber(numbers, 4);
-            FindNumber(numbers, 1);
-            FindNumber(numbers, 9);
-            FindNumber(numbers, 5);
-            numbers = new int[]{ 3, 5, 7, 9};
-            FindNumber(numbers, 4);
-            FindNumber(numbers, 6);
-            FindNumber(numbers, 9);
         }
     }
 }
