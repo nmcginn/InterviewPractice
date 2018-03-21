@@ -30,6 +30,13 @@ namespace binary_search
         {
             var numbers = new int[]{ 1, 3, 5, 7, 9 };
             FindNumber(numbers, 4);
+            FindNumber(numbers, 1);
+            FindNumber(numbers, 9);
+            FindNumber(numbers, 5);
+            numbers = new int[]{ 3, 5, 7, 9};
+            FindNumber(numbers, 4);
+            FindNumber(numbers, 6);
+            FindNumber(numbers, 9);
         }
     }
 }
