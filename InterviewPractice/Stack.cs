@@ -40,6 +40,23 @@ namespace InterviewPractice
             parent.Next = null;
             return current.Value;
         }
+
+        public static Stack<T> ReverseStack(Stack<T> stack)
+        {
+            var newStack = new Stack<T>();
+            var temp = new Stack<T>();
+            while (!stack.IsEmpty())
+            {
+                var element = stack.Pop();
+                newStack.Push(element);
+                temp.Push(element);
+            }
+            while (!temp.IsEmpty())
+            {
+                stack.Push(temp.Pop());
+            }
+            return newStack;
+        }
     }
 
     public class StackNode<T>
