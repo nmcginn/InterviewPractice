@@ -17,10 +17,10 @@ namespace InterviewPractice.Tests
             var nine = BinarySearch.FindNumber(numbers, 9);
             var five = BinarySearch.FindNumber(numbers, 5);
             // assert
-            Assert.Equal(five, 5);
-            Assert.Equal(one, 1);
-            Assert.Equal(three, 3);
-            Assert.Equal(nine, 9);
+            Assert.Equal(5, five);
+            Assert.Equal(1, one);
+            Assert.Equal(3, three);
+            Assert.Equal(9, nine);
         }
 
         [Fact]
@@ -33,9 +33,9 @@ namespace InterviewPractice.Tests
             var five = BinarySearch.FindNumber(numbers, 6);
             var nine = BinarySearch.FindNumber(numbers, 9);
             // assert
-            Assert.Equal(five, 5);
-            Assert.Equal(nine, 9);
-            Assert.Equal(three, 3);
+            Assert.Equal(5, five);
+            Assert.Equal(9, nine);
+            Assert.Equal(3, three);
         }
     }
 }
