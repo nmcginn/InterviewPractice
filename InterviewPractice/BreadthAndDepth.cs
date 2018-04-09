@@ -27,7 +27,7 @@ namespace InterviewPractice
         public static string DepthFirstSearch(Node root)
         {
             Console.WriteLine("\nDEPTH FIRST");
-            var stack = new Stack<Node>();
+            var stack = new System.Collections.Generic.Stack<Node>();
             var result = "";
             stack.Push(root);
             while (stack.Count > 0)
